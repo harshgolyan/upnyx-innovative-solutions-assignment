@@ -5,21 +5,15 @@ import Chatbar from "./Chatbar";
 const Chatbot = () => {
     return (
         <>
-            <div>
-                <div>
-                    <Navbar />
-                </div>
-                <div className="flex ">
-                    <div>
-                        <Sidebar />
-                    </div>
-                    <div>
-                        <Chatbar />
-                    </div>
+            <div className="flex flex-col h-screen">
+                <Navbar />
+                <div className="flex flex-grow overflow-hidden">
+                    <Sidebar />
+                    <Chatbar />
                 </div>
             </div>
         </>
-    )
+    );
 }
 
 export default Chatbot;

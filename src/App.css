@@ -2,3 +2,8 @@
 .shadow-top {
   box-shadow: -5px -5px 10px 5px #d2d1d1;
 }
+
+.chatbar {
+  overflow-y: auto; /* Allow scrolling */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
