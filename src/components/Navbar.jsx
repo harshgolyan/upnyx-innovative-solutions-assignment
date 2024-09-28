@@ -1,6 +1,7 @@
 import { CircleUserRound } from "lucide-react";
 import Dropdown from "./Dropdown";
-const Navbar = () => {
+
+const Navbar = ({ selectedOption, setSelectedOption }) => {
     return (
         <>
             <div className="h-[3.875rem] w-full bg-[#0095A9FF] flex items-center justify-between sticky top-0 left-0 py-2">
@@ -9,7 +10,7 @@ const Navbar = () => {
                 </div>
                 <div className="flex space-x-10 mr-20">
                     <div>
-                        <Dropdown />
+                        <Dropdown selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
                     </div>
                     <div className="flex items-center">
                         <CircleUserRound size={30} color="white" />

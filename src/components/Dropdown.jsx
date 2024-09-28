@@ -1,14 +1,15 @@
 import { useState } from 'react';
 
-const Dropdown = () => {
+const Dropdown = ({ selectedOption, setSelectedOption }) => {
     const [isOpen, setIsOpen] = useState(false);
+
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
     };
 
     const handleItemClick = (item) => {
-        console.log(`${item} clicked`);
+        setSelectedOption(item);
         setIsOpen(false);
     };
 
@@ -28,7 +29,7 @@ const Dropdown = () => {
                     onClick={toggleDropdown}
                     className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100"
                 >
-                    Department : Marketing
+                    Department : {selectedOption}
                 </button>
             </div>
 
