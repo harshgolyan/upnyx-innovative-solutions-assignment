@@ -15,7 +15,7 @@ const Sidebar = ({selectedOption, setSelectedOption}) => {
     return (
         <>
             <div className={`md:sticky fixed mt-12 md:mt-0 inset-y-0 left-0 z-10 transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0`}>
-                <div className="w-[14.63rem] h-[36rem] overflow-hidden m-2 mt-4 rounded-md flex flex-col bg-white shadow-md">
+                <div className="w-[14.63rem] md:h-[40rem] h-[36rem] overflow-hidden m-2 mt-4 rounded-md flex flex-col bg-white shadow-md">
                 <button
                     onClick={toggleSidebar}
                     className="absolute top-4 right-4 md:hidden"
