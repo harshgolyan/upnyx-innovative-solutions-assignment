@@ -10,7 +10,7 @@ const Chatbot = () => {
             <div className="flex flex-col h-screen">
                 <Navbar selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
                 <div className="flex flex-grow overflow-hidden">
-                    <Sidebar />
+                    <Sidebar selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
                     <Chatbar selectedOption={selectedOption} />
                 </div>
             </div>

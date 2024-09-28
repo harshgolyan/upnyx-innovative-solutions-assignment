@@ -7,3 +7,9 @@
   overflow-y: auto; /* Allow scrolling */
   scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
+@media (max-width: 620px) {
+  .chatbar {
+      width: 100%;
+      margin: 0; /* Remove margins on the x-axis */
+  }
+}

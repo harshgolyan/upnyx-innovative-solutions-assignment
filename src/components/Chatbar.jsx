@@ -1,33 +1,23 @@
-import { Pencil, MessageSquare, BadgeHelp, Mail, FileDown, Copy, ChartLine, SendHorizonal } from "lucide-react";
-import "../App.css"
+import { Pencil, BadgeHelp, SendHorizonal } from "lucide-react";
+import "../App.css";
 
 const Chatbar = ({ selectedOption }) => {
     const questionsAndAnswers = [
-        { type: "answer", text: "Paris Paris Paris Paris Paris Paris Paris" },
-        { type: "question", text: "What is the capital of France?" },
-        { type: "answer", text: "William Shakespeare" },
-        { type: "answer", text: "In today’s fast-paced world, effective communication plays a crucial role in building " },
         { type: "question", text: "What is the largest planet in our solar system?" },
-        { type: "answer", text: "Paris Paris Paris Paris Paris Paris Paris" },
+        { type: "answer", text: "Jupiter is the largest planet in our solar system." },
+        { type: "question", text: "How many continents are there on Earth?" },
+        { type: "answer", text: "There are seven continents on Earth." },
         { type: "question", text: "What is the capital of France?" },
-        { type: "answer", text: "William Shakespeare" },
-        { type: "answer", text: "In today’s fast-paced world, effective communication plays a crucial role in building In today’s fast-paced world, effective communication plays a crucial role in building In today’s fast-paced world, effective communication plays a crucial role in building " },
-        { type: "question", text: "What is the largest planet in our solar system?" },
-        { type: "answer", text: "Paris Paris Paris Paris Paris Paris Paris" },
-        { type: "question", text: "What is the capital of France?" },
-        { type: "answer", text: "William Shakespeare" },
-        { type: "answer", text: "In today’s fast-paced world, effective communication plays a crucial role in building " },
-        { type: "question", text: "What is the largest planet in our solar system?" },
-        { type: "answer", text: "Paris Paris Paris Paris Paris Paris Paris" },
-        { type: "question", text: "What is the capital of France?" },
-        { type: "answer", text: "William Shakespeare" },
-        { type: "answer", text: "In today’s fast-paced world, effective communication plays a crucial role in building " },
-        { type: "question", text: "What is the largest planet in our solar system?" },
+        { type: "answer", text: "The capital of France is Paris." },
+        { type: "question", text: "Who wrote 'Romeo and Juliet'?" },
+        { type: "answer", text: "William Shakespeare wrote 'Romeo and Juliet'." },
+        { type: "question", text: "What is the chemical symbol for water?" },
+        { type: "answer", text: "The chemical symbol for water is H₂O." },
     ];
 
     return (
-        <div className="flex flex-col h-full w-[46.88rem] rounded-md mb-2 mt-7 ml-5 relative">
-            <div className="h-[5.5rem] w-full border-2 border-gray-400 rounded-md">
+        <div className="flex flex-col h-full w-full md:w-[46.88rem] md:mt-7 rounded-md mb-2 mt-[4rem] mr-[4rem] sm:mr-4 justify-center ml-5 sm:ml-1 relative">
+            <div className="sm:h-[5.5rem] h-auto w-full border-2 border-gray-400 rounded-md">
                 <div className="font-bold text-lg pl-[2rem] pt-[0.5rem]">Introduce yourself to AIWorkSquad</div>
                 <div className="flex items-center pl-[2rem] pt-[0.5rem]">
                     <div className="text-gray-400 mr-2">I am Harsh. CEO of an IT company</div>
@@ -54,16 +44,24 @@ const Chatbar = ({ selectedOption }) => {
                     </div>
                 ))}
             </div>
-            <div className="flex-none mt-4 mb-[12rem] px-5">
-                <BadgeHelp size={25} className="absolute text-[#12A9BCFF] left-[2.5rem] bottom-[12.8rem]"  /> 
+
+            <div className="flex-none mt-4 mb-[8rem] px-5">
+                <BadgeHelp 
+                    size={25} 
+                    className="absolute text-[#12A9BCFF] left-[2.5rem] bottom-[8.8rem]"  
+                /> 
                 <input
-                    className="border rounded-md w-full h-[3.5rem] px-2 text-[#12A9BCFF] pl-[5rem] placeholder:text-[#12A9BCFF]" 
+                    className="border rounded-md md:w-[44.88rem] sm:min-w-[35rem] w-[42rem] h-[3.5rem] px-2 text-[#12A9BCFF] pl-[5rem] placeholder:text-[#12A9BCFF]" 
                     type="text" 
                     placeholder={`Enter your ${selectedOption} query here ...`}
                 />
-                <SendHorizonal size={25} className="absolute text-[#12A9BCFF] right-[2.5rem] bottom-[12.8rem]" />
+                <SendHorizonal 
+                    size={25} 
+                    className="absolute text-[#12A9BCFF] right-[2.5rem] bottom-[8.8rem]" 
+                />
             </div>
-            <div className="text-xs font-light text-gray-500 mt-2 absolute bottom-[9rem] pl-10">
+
+            <div className="text-xs font-light text-gray-500 mt-2 absolute bottom-[4rem] pl-10">
                 Type your next question above or select one from the related questions section.
             </div>
         </div>

@@ -8,8 +8,8 @@ const Navbar = ({ selectedOption, setSelectedOption }) => {
                 <div >
                     <img className="h-[2.63rem] w-[13.75rem] bg-white mx-2 p-1 rounded-sm" src="icon2.png" alt="Icon" />
                 </div>
-                <div className="flex space-x-10 mr-20">
-                    <div>
+                <div className="flex space-x-10 mr-20 ">
+                    <div className="hidden md:block">
                         <Dropdown selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
                     </div>
                     <div className="flex items-center">
